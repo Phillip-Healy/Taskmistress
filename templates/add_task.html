@@ -4,7 +4,8 @@
     <h3 class="text-shadow white-text teal darken-2">Add Tasks</h3>
 
     <div class="row card-panel grey lighten-5">
-        <form class="col s12 m8 offset-m2" method="POST" action="">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_task') }}">
+            <!-- category selector -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix teal-text text-darken-2"></i>
@@ -17,6 +18,7 @@
                     <label>Task Category</label>
                 </div>
             </div>
+            <!-- task name -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix teal-text text-darken-2"></i>
@@ -25,6 +27,7 @@
                     <label for="task_name">Task Name</label>
                 </div>
             </row>
+            <!-- description box -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix teal-text text-darken-2"></i>
@@ -33,6 +36,7 @@
                     <label for="task_description">Description of task</label>
                 </div>
             </div>
+            <!-- date picker -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix teal-text text-darken-2"></i>
@@ -40,9 +44,9 @@
                     <label for="due_date">Due Date</label>
                 </div>
             </row>
+            <!-- urgent switch -->
             <div class="row">
                 <div class="input-field col s12">
-                      <!-- Switch -->
                     <div class="switch">
                         <i class="fas fa-exclamation-circle prefix teal-text text-darken-2"></i>
                         <label for="is_urgent">
@@ -51,6 +55,15 @@
                             Is Urgent
                         </label>
                     </div>
+                </div>
+            </div>
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large teal darken-2 text-shadow">
+                        Add Task
+                        <i class="fas fa-plus-square right"></i>
+                    </button>
                 </div>
             </div>
         </form>
